@@ -10,6 +10,7 @@ Fractional CFO practice website for Kristina van den Berg-Hutzler.
 | `about.html` | `/about` | About page — bio, career, assignments, human section |
 | `contact.html` | `/contact` | Contact page — form, details |
 
+
 ## Assets
 
 | File | Used in |
