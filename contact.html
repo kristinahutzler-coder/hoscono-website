@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — HOSCONO Insights</title>
+  <meta name="description" content="Get in touch with Kristina van den Berg-Hutzler. Start with The Finance Scan or book a 30-minute call.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="site">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--g:'EB Garamond',Georgia,serif;--s:'DM Sans',Arial,sans-serif;--green:#18412B;--deep:#00291B;--ivory:#F3EEE4;--ivory2:#EDE8DC;--px:#E8437A}
+.site{font-family:var(--s);background:var(--ivory);color:var(--green);width:100%}
+.nav{background:var(--deep);padding:14px 32px;display:flex;justify-content:space-between;align-items:center}
+.logo-wrap{display:flex;flex-direction:column;line-height:1}
+.logo-main{font-family:var(--s);font-size:16px;letter-spacing:5px;font-weight:600;color:var(--ivory)}
+.logo-sub{font-family:var(--g);font-size:11px;font-style:italic;color:var(--ivory);opacity:0.45;margin-top:3px}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-link{color:var(--ivory);font-size:12px;text-decoration:none;opacity:0.75;display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:3px}
+.nav-cta{background:var(--px);color:#fff;padding:8px 18px;border-radius:3px;font-size:12px;font-weight:600;display:inline-flex;align-items:center;gap:7px;margin-left:8px;text-decoration:none}
+/* HERO */
+.contact-hero{background:var(--deep);padding:72px 32px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(243,238,228,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(243,238,228,0.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
+.contact-left{position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:2px;color:var(--px);margin-bottom:20px}
+.contact-left h1{font-family:var(--g);font-size:40px;font-weight:400;color:var(--ivory);margin-bottom:16px;line-height:1.2}
+.contact-left h1 em{font-style:italic;color:var(--px)}
+.contact-left p{font-size:14px;color:var(--ivory);opacity:0.55;line-height:1.85;font-weight:300;margin-bottom:32px}
+.contact-details{display:flex;flex-direction:column;gap:12px}
+.contact-detail{display:flex;align-items:center;gap:12px;color:var(--ivory);opacity:0.65;font-size:13px;font-weight:300}
+.contact-detail i{font-size:16px;color:var(--px);flex-shrink:0}
+.contact-photo-wrap{position:relative;z-index:1}
+.contact-photo{width:100%;max-width:340px;border-radius:4px;display:block;object-fit:cover;object-position:center 15%;max-height:460px}
+.photo-badge{position:absolute;bottom:16px;left:16px;background:var(--px);color:#fff;font-size:10px;font-weight:600;padding:8px 14px;border-radius:3px;letter-spacing:0.5px;font-family:var(--s)}
+/* FORM */
+.contact-form-section{padding:72px 32px;background:var(--ivory);display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.form-left h2{font-family:var(--g);font-size:28px;font-weight:400;margin-bottom:10px;line-height:1.3}
+.form-left h2 em{font-style:italic;color:var(--px)}
+.form-left p{font-size:13px;opacity:0.55;line-height:1.8;font-weight:300;margin-bottom:28px}
+.scan-card{background:var(--green);border-radius:4px;padding:24px;border-left:2px solid var(--px)}
+.scan-card h4{font-family:var(--g);font-size:18px;font-style:italic;color:var(--ivory);margin-bottom:8px}
+.scan-card p{font-size:12px;color:var(--ivory);opacity:0.55;line-height:1.65;font-weight:300}
+.form-right{display:flex;flex-direction:column;gap:16px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group label{font-size:10px;letter-spacing:1.5px;color:var(--green);opacity:0.45;font-weight:500}
+.form-input{background:#fff;border:1px solid rgba(24,65,43,0.15);border-radius:3px;padding:12px 14px;font-family:var(--s);font-size:13px;color:var(--green);outline:none;transition:border-color 0.2s;width:100%}
+.form-input:focus{border-color:var(--px)}
+.form-select{background:#fff;border:1px solid rgba(24,65,43,0.15);border-radius:3px;padding:12px 14px;font-family:var(--s);font-size:13px;color:var(--green);outline:none;width:100%;cursor:pointer;appearance:none}
+.form-textarea{background:#fff;border:1px solid rgba(24,65,43,0.15);border-radius:3px;padding:12px 14px;font-family:var(--s);font-size:13px;color:var(--green);outline:none;resize:vertical;min-height:120px;width:100%;transition:border-color 0.2s}
+.form-textarea:focus{border-color:var(--px)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.submit-btn{background:#E8437A;color:#fff;font-family:var(--s);font-size:13px;font-weight:600;padding:14px 28px;border:none;border-radius:3px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;align-self:flex-start}
+.form-note{font-size:11px;opacity:0.35;margin-top:4px;font-weight:300}
+/* FOOTER */
+.footer{background:var(--deep);padding:24px 32px;display:flex;justify-content:space-between;align-items:center;border-top:0.5px solid rgba(243,238,228,0.06)}
+.footer-left{display:flex;flex-direction:column;gap:2px}
+.footer-logo{font-family:var(--s);font-size:13px;letter-spacing:4px;font-weight:600;color:var(--ivory);opacity:0.5}
+.footer-sub{font-family:var(--g);font-size:10px;font-style:italic;color:var(--ivory);opacity:0.25}
+.footer-links{display:flex;gap:24px}
+.footer-link{font-size:11px;color:var(--ivory);opacity:0.3;text-decoration:none;display:flex;align-items:center;gap:5px}
+</style>
+
+<div class="site">
+<nav class="nav">
+  <a class="logo-wrap" href="index.html"><span class="logo-main">HOSCONO</span><span class="logo-sub">Insights</span></a>
+  <div class="nav-links">
+    <a href="#" class="nav-link"><i class="ti ti-layout-grid"></i> Services</a>
+    <a href="#" class="nav-link"><i class="ti ti-user"></i> About</a>
+    <a href="#" class="nav-link"><i class="ti ti-mail"></i> Contact</a>
+    <a href="#" class="nav-cta"><i class="ti ti-arrow-right"></i> GET IN TOUCH</a>
+  </div>
+</nav>
+
+<div class="contact-hero">
+  <div class="hero-grid"></div>
+  <div class="contact-left">
+    <div class="eyebrow"><i class="ti ti-mail"></i> GET IN TOUCH</div>
+    <h1>Let's talk about<br>your <em>finance function.</em></h1>
+    <p>Whether you're looking for a structured diagnostic, a productized finance system, or a senior CFO partner — the first step is a conversation. No pitch, no pressure.</p>
+    <div class="contact-details">
+      <div class="contact-detail"><i class="ti ti-mail"></i> hello@hosconoinsights.com</div>
+      <div class="contact-detail"><i class="ti ti-map-pin"></i> Amsterdam, Netherlands</div>
+      <div class="contact-detail"><i class="ti ti-brand-linkedin"></i> linkedin.com/in/kristinavandenberqhutzler</div>
+      <div class="contact-detail"><i class="ti ti-clock"></i> Responds within 1 business day</div>
+    </div>
+  </div>
+  <div class="contact-photo-wrap">
+    <img class="contact-photo" src="assets/portrait.jpg" alt="Kristina van den Berg-Hutzler">
+    <div class="photo-badge">KRISTINA VAN DEN BERG-HUTZLER</div>
+  </div>
+</div>
+
+<div class="contact-form-section">
+  <div class="form-left">
+    <h2>Send a<br><em>message.</em></h2>
+    <p>Tell me about your company and what you're looking for. I'll come back to you within one business day to arrange a call.</p>
+    <div class="scan-card">
+      <h4>Not sure where to start?</h4>
+      <p>The Finance Scan is the natural entry point — a structured diagnostic of your current finance function that gives you a concrete action plan. Low commitment, high value.</p>
+    </div>
+  </div>
+  <div class="form-right">
+    <div class="form-row">
+      <div class="form-group">
+        <label>FIRST NAME</label>
+        <input class="form-input" type="text" placeholder="First name">
+      </div>
+      <div class="form-group">
+        <label>LAST NAME</label>
+        <input class="form-input" type="text" placeholder="Last name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>COMPANY</label>
+      <input class="form-input" type="text" placeholder="Your company name">
+    </div>
+    <div class="form-group">
+      <label>EMAIL</label>
+      <input class="form-input" type="email" placeholder="you@company.com">
+    </div>
+    <div class="form-group">
+      <label>I AM INTERESTED IN</label>
+      <select class="form-select">
+        <option value="">Select an option</option>
+        <option>The Finance Scan</option>
+        <option>The Decision Engine (AI-powered)</option>
+        <option>Finance Transformation (Embedded CFO)</option>
+        <option>Just exploring — tell me more</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>YOUR MESSAGE</label>
+      <textarea class="form-textarea" placeholder="Tell me about your company, your current finance setup, and what you're looking for..."></textarea>
+    </div>
+    <button class="submit-btn">SEND MESSAGE <i class="ti ti-arrow-right"></i></button>
+    <span class="form-note">I'll respond within 1 business day.</span>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-left"><span class="footer-logo">HOSCONO</span><span class="footer-sub">Insights</span></div>
+  <div class="footer-links">
+    <a href="#" class="footer-link"><i class="ti ti-map-pin"></i> Amsterdam</a>
+    <a href="#" class="footer-link"><i class="ti ti-mail"></i> hello@hosconoinsights.com</a>
+    <a href="#" class="footer-link"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
+  </div>
+</footer>
+</div>
+</div>
+</body>
+</html>
