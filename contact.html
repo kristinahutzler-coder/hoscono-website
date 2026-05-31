@@ -103,28 +103,28 @@
       <p>The Finance Scan is the natural entry point — a structured diagnostic of your current finance function that gives you a concrete action plan. Low commitment, high value.</p>
     </div>
   </div>
-  <div class="form-right">
+  <form class="form-right" action="https://formspree.io/f/maqkzloj" method="POST">
     <div class="form-row">
       <div class="form-group">
         <label>FIRST NAME</label>
-        <input class="form-input" type="text" placeholder="First name">
+        <input class="form-input" type="text" name="first_name" placeholder="First name">
       </div>
       <div class="form-group">
         <label>LAST NAME</label>
-        <input class="form-input" type="text" placeholder="Last name">
+        <input class="form-input" type="text" name="last_name" placeholder="Last name">
       </div>
     </div>
     <div class="form-group">
       <label>COMPANY</label>
-      <input class="form-input" type="text" placeholder="Your company name">
+      <input class="form-input" type="text" name="company" placeholder="Your company name">
     </div>
     <div class="form-group">
       <label>EMAIL</label>
-      <input class="form-input" type="email" placeholder="you@company.com">
+      <input class="form-input" type="email" name="email" placeholder="you@company.com">
     </div>
     <div class="form-group">
       <label>I AM INTERESTED IN</label>
-      <select class="form-select">
+      <select class="form-select" name="interest">
         <option value="">Select an option</option>
         <option>The Finance Scan</option>
         <option>The Decision Engine (AI-powered)</option>
@@ -134,11 +134,11 @@
     </div>
     <div class="form-group">
       <label>YOUR MESSAGE</label>
-      <textarea class="form-textarea" placeholder="Tell me about your company, your current finance setup, and what you're looking for..."></textarea>
+      <textarea class="form-textarea" name="message" placeholder="Tell me about your company, your current finance setup, and what you're looking for..."></textarea>
     </div>
-    <button class="submit-btn">SEND MESSAGE <i class="ti ti-arrow-right"></i></button>
+    <button class="submit-btn" type="submit">SEND MESSAGE <i class="ti ti-arrow-right"></i></button>
     <span class="form-note">I'll respond within 1 business day.</span>
-  </div>
+  </form>
 </div>
 
 <footer class="footer">
