@@ -20,12 +20,12 @@ body{font-family:var(--s);background:var(--ivory);color:var(--green)}
 img{display:block;max-width:100%}
 
 /* --- Nav --- */
-.nav{background:var(--deep);padding:14px 32px;display:flex;justify-content:space-between;align-items:center;border-bottom:0.5px solid rgba(243,238,228,0.1)}
+.nav{background:var(--deep);padding:20px 32px;display:flex;justify-content:space-between;align-items:center;border-bottom:0.5px solid rgba(243,238,228,0.1)}
 .logo-wrap{display:flex;flex-direction:column;line-height:1;text-decoration:none}
-.logo-main{font-family:var(--s);font-size:16px;letter-spacing:5px;font-weight:600;color:var(--ivory)}
-.logo-sub{font-family:var(--g);font-size:11px;font-style:italic;color:var(--ivory);opacity:0.45;letter-spacing:1px;margin-top:3px}
+.logo-main{font-family:var(--s);font-size:20px;letter-spacing:5px;font-weight:600;color:var(--ivory)}
+.logo-sub{font-family:var(--g);font-size:14px;font-style:italic;color:var(--ivory);opacity:0.45;letter-spacing:1px;margin-top:3px}
 .nav-links{display:flex;gap:4px;align-items:center}
-.nav-link{color:var(--ivory);font-size:12px;text-decoration:none;opacity:0.75;display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:3px;transition:opacity 0.2s,background 0.2s}
+.nav-link{color:var(--ivory);font-size:14px;text-decoration:none;opacity:0.75;display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:3px;transition:opacity 0.2s,background 0.2s}
 .nav-link:hover{opacity:1;background:rgba(243,238,228,0.08)}
 .nav-link i{font-size:15px}
 .nav-cta{background:var(--px)!important;color:#fff!important;opacity:1!important;padding:8px 18px;border-radius:3px;font-size:12px;font-weight:600;letter-spacing:0.5px;display:inline-flex;align-items:center;gap:7px;margin-left:8px;text-decoration:none}
