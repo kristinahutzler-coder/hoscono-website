@@ -123,6 +123,10 @@ h2 em{font-style:italic;color:var(--px)}
 .logo-item:hover .logo-text{opacity:0.7}
 .logo-sublabel{font-family:var(--s);font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--green);opacity:0.25;font-weight:500}
 
+.select-prompt{display:flex;align-items:center;justify-content:center;gap:10px;padding:32px;background:var(--ivory2);color:var(--green);opacity:0.4;font-size:13px;font-weight:300}
+.select-prompt i{font-size:18px;color:var(--px)}
+.select-prompt.hidden{display:none}
+  
 .cta-s{background:var(--deep);padding:56px 32px;display:flex;justify-content:space-between;align-items:center;gap:32px}
 .cta-s h2{font-family:var(--g);font-size:28px;font-style:italic;color:var(--ivory);margin-bottom:8px}
 .cta-s .cta-sub{font-size:13px;color:var(--ivory);opacity:0.4;display:flex;align-items:center;gap:6px;font-weight:300}
@@ -202,7 +206,7 @@ h2 em{font-style:italic;color:var(--px)}
   <p class="sub" style="margin-bottom:24px">Every company is at a different stage. Select what matches yours and see exactly how we work together.</p>
   <div class="selector-hint"><i class="ti ti-hand-click"></i><span>Click the option that fits your situation</span></div>
   <div class="callout-grid">
-    <div class="callout-card active" data-track="ai">
+    <div class="callout-card" data-track="ai">
       <i class="ti ti-cpu callout-icon"></i>
       <span class="callout-label">PRODUCTIZED · FIXED FEE</span>
       <div class="callout-title">AI-powered finance function</div>
@@ -219,7 +223,12 @@ h2 em{font-style:italic;color:var(--px)}
   </div>
 </section>
 
-<div class="detail-zone visible" id="zone-ai">
+<div class="select-prompt" id="select-prompt">
+  <i class="ti ti-arrow-up"></i>
+  <span>Select a path above to see how it works.</span>
+</div>  
+  
+<div class="detail-zone" id="zone-ai">
   <div class="detail-zone-label"><i class="ti ti-cpu"></i> THE DECISION ENGINE</div>
   <div class="detail-grid">
     <div class="svc-detail highlight">
@@ -364,7 +373,7 @@ h2 em{font-style:italic;color:var(--px)}
     </div>
   </div>
 </div>
-
+  
 <footer class="footer">
   <div class="footer-left">
     <span class="footer-logo">HOSCONO</span>
@@ -381,13 +390,15 @@ h2 em{font-style:italic;color:var(--px)}
 <script>
 (function(){
   function switchTrack(track){
-    document.querySelectorAll('.callout-card').forEach(function(c){c.classList.remove('active');});
-    document.querySelectorAll('.detail-zone').forEach(function(z){z.classList.remove('visible');});
-    var card=document.querySelector('[data-track="'+track+'"]');
-    var zone=document.getElementById('zone-'+track);
-    if(card) card.classList.add('active');
-    if(zone){zone.classList.add('visible');setTimeout(function(){zone.scrollIntoView({behavior:'smooth',block:'nearest'});},50);}
-  }
+  document.querySelectorAll('.callout-card').forEach(function(c){c.classList.remove('active');});
+  document.querySelectorAll('.detail-zone').forEach(function(z){z.classList.remove('visible');});
+  var card=document.querySelector('[data-track="'+track+'"]');
+  var zone=document.getElementById('zone-'+track);
+  var prompt=document.getElementById('select-prompt');
+  if(prompt) prompt.classList.add('hidden');
+  if(card) card.classList.add('active');
+  if(zone){zone.classList.add('visible');setTimeout(function(){zone.scrollIntoView({behavior:'smooth',block:'nearest'});},50);}
+}
   document.querySelectorAll('.callout-card').forEach(function(card){
     card.addEventListener('click',function(){switchTrack(this.getAttribute('data-track'));});
   });
