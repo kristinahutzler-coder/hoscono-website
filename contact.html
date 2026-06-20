@@ -43,6 +43,9 @@
 .scan-card{background:var(--green);border-radius:4px;padding:20px 24px;border-left:2px solid var(--px);margin-bottom:32px}
 .scan-card h4{font-family:var(--g);font-size:17px;font-style:italic;color:var(--ivory);margin-bottom:6px}
 .scan-card p{font-size:12px;color:var(--ivory);opacity:0.55;line-height:1.65;font-weight:300;margin-bottom:0}
+.form-divider{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.form-divider::before,.form-divider::after{content:'';flex:1;height:0.5px;background:rgba(24,65,43,0.15)}
+.form-divider span{font-size:11px;color:var(--green);opacity:0.4;white-space:nowrap}
 .form-right{display:flex;flex-direction:column;gap:16px}
 .form-group{display:flex;flex-direction:column;gap:6px}
 .form-group label{font-size:10px;letter-spacing:1.5px;color:var(--green);opacity:0.45;font-weight:500}
@@ -143,5 +146,14 @@
 </footer>
 </div>
 </div>
+<script>
+document.getElementById('scan-cta').addEventListener('click', function(){
+  var select = document.getElementById('interest-select');
+  if(select){
+    select.value = 'The Finance Scan';
+  }
+  document.querySelector('.form-right').scrollIntoView({behavior:'smooth', block:'start'});
+});
+</script>
 </body>
 </html>
