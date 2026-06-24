@@ -47,6 +47,11 @@
 .form-divider{display:flex;align-items:center;gap:12px;margin-bottom:24px}
 .form-divider::before,.form-divider::after{content:'';flex:1;height:0.5px;background:rgba(24,65,43,0.15)}
 .form-divider span{font-size:12px;color:var(--green);opacity:0.45;white-space:nowrap}
+.scan-confirm{display:none;align-items:center;gap:10px;background:rgba(232,67,122,0.1);border:1px solid rgba(232,67,122,0.35);border-radius:4px;padding:12px 16px;margin-bottom:20px;font-size:13px;color:var(--green);font-weight:500;animation:fadeIn 0.25s ease}
+.scan-confirm.visible{display:flex}
+.scan-confirm i{font-size:17px;color:var(--px);flex-shrink:0}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.form-select.highlighted{border-color:var(--px);border-width:1.5px;background:rgba(232,67,122,0.04)}
 .form-right{display:flex;flex-direction:column;gap:16px}
 .form-group{display:flex;flex-direction:column;gap:6px}
 .form-group label{font-size:11px;letter-spacing:1.5px;color:var(--green);opacity:0.5;font-weight:500}
@@ -157,6 +162,10 @@
     <p>Most people begin with the Finance Scan, a structured diagnostic of your finance function with a concrete action plan. Low commitment, high value.</p>
     <button class="submit-btn" type="button" id="scan-cta" style="margin-bottom:32px">BOOK A FINANCE SCAN <i class="ti ti-arrow-right"></i></button>
     <div class="form-divider"><span>or send a general message</span></div>
+    <div class="scan-confirm" id="scan-confirm">
+      <i class="ti ti-circle-check"></i>
+      <span>Finance Scan selected — fill in your details below to request it.</span>
+    </div>
     <form class="form-right" action="https://formspree.io/f/maqkzloj" method="POST">
       <div class="form-row">
         <div class="form-group">
@@ -209,10 +218,22 @@
 <script>
 document.getElementById('scan-cta').addEventListener('click', function(){
   var select = document.getElementById('interest-select');
+  var confirm = document.getElementById('scan-confirm');
   if(select){
     select.value = 'The Finance Scan';
+    select.classList.add('highlighted');
+  }
+  if(confirm){
+    confirm.classList.add('visible');
   }
   document.querySelector('.form-right').scrollIntoView({behavior:'smooth', block:'start'});
+});
+document.getElementById('interest-select').addEventListener('change', function(){
+  var confirm = document.getElementById('scan-confirm');
+  if(this.value !== 'The Finance Scan'){
+    this.classList.remove('highlighted');
+    if(confirm) confirm.classList.remove('visible');
+  }
 });
 (function(){
   var openBtn=document.getElementById('hamburger-open');
