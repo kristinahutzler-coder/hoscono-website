@@ -60,6 +60,16 @@
 .assign-client{font-size:11px;background:rgba(24,65,43,0.06);border:0.5px solid rgba(24,65,43,0.12);border-radius:2px;padding:4px 9px;color:var(--green);opacity:0.72;font-weight:500}
 .assign-card p{font-size:15px;opacity:0.72;line-height:1.65;font-weight:300}
 .about-human{background:var(--green);padding:72px 32px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+
+/* CLIENT LOGO BAR */
+.logo-bar{background:var(--green);padding:64px 32px;border-top:0.5px solid rgba(243,238,228,0.08)}
+.logo-bar-label{display:block;text-align:center;font-size:13px;letter-spacing:2px;color:var(--ivory);opacity:0.65;margin-bottom:40px;font-weight:600}
+.logo-row{display:flex;justify-content:center;align-items:center;gap:0;flex-wrap:wrap}
+.logo-item{padding:16px 32px;border-right:0.5px solid rgba(243,238,228,0.15);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.logo-item:last-child{border-right:none}
+.logo-text{font-family:var(--s);font-size:17px;font-weight:600;color:var(--ivory);opacity:0.82;letter-spacing:1px;text-transform:uppercase;transition:opacity 0.2s;white-space:nowrap}
+.logo-item:hover .logo-text{opacity:1}
+.logo-sublabel{font-family:var(--s);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--ivory);opacity:0.45;font-weight:500}
 .human-left h2{font-family:var(--g);font-size:32px;font-weight:400;color:var(--ivory);margin-bottom:16px;line-height:1.3}
 .human-left h2 em{font-style:italic;color:var(--px)}
 .human-left p{font-size:16px;color:var(--ivory);opacity:0.8;line-height:1.85;font-weight:300;margin-bottom:14px}
@@ -132,6 +142,10 @@
   .assign-card{padding:18px}
 
   .about-human{padding:48px 20px}
+  .logo-bar{padding:40px 16px}
+  .logo-item{padding:12px 16px;border-right:none;border-bottom:0.5px solid rgba(243,238,228,0.15);width:100%}
+  .logo-row{flex-direction:column;align-items:stretch}
+  .logo-item:last-child{border-bottom:none}
   .human-left h2{font-size:24px}
   .human-photo{object-position:center;max-height:180px}
 
@@ -154,7 +168,7 @@
   </div>
   <a class="logo-wrap" href="index.html"><span class="logo-main">HOSCONO</span><span class="logo-sub">Insights</span></a>
   <div class="nav-group-right">
-    <a href="index.html#logo-bar" class="nav-link"><i class="ti ti-trophy"></i> Track record</a>
+    <a href="#logo-bar" class="nav-link"><i class="ti ti-trophy"></i> Track record</a>
     <a href="contact.html" class="nav-cta"><i class="ti ti-arrow-right"></i> CONTACT</a>
     <button class="hamburger-btn" id="hamburger-open" aria-label="Open menu"><i class="ti ti-menu-2"></i></button>
   </div>
@@ -168,7 +182,7 @@
   <div class="mobile-menu-links">
     <a href="index.html#services"><i class="ti ti-layout-grid"></i> Services</a>
     <a href="about.html"><i class="ti ti-user"></i> About</a>
-    <a href="index.html#logo-bar"><i class="ti ti-trophy"></i> Track record</a>
+    <a href="#logo-bar"><i class="ti ti-trophy"></i> Track record</a>
     <a href="contact.html" class="nav-cta"><i class="ti ti-arrow-right"></i> CONTACT</a>
   </div>
 </div>
@@ -258,6 +272,45 @@
         <span class="assign-client">Conway</span>
       </div>
       <p>Acting as fractional CFO for fast-growing tech companies. Building the first financial structures, implementing reporting, and laying foundations for scalable, investor-ready growth.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CLIENT LOGO BAR -->
+<div class="logo-bar" id="logo-bar">
+  <span class="logo-bar-label">TRUSTED BY FAST-GROWING COMPANIES</span>
+  <div class="logo-row">
+    <div class="logo-item">
+      <span class="logo-text">Deeploy</span>
+      <span class="logo-sublabel">Client</span>
+    </div>
+    <div class="logo-item">
+      <span class="logo-text">Kasteel de Hooge Vuursche</span>
+      <span class="logo-sublabel">Client</span>
+     </div>
+    <div class="logo-item">
+      <span class="logo-text">Conway</span>
+      <span class="logo-sublabel">Client</span>
+    </div>
+    <div class="logo-item">
+      <span class="logo-text">Tera Adora</span>
+      <span class="logo-sublabel">Client</span>
+    </div>
+    <div class="logo-item">
+      <span class="logo-text">ULAC</span>
+      <span class="logo-sublabel">Client</span>
+    </div>
+      <div class="logo-item">
+        <span class="logo-text">Feelou</span>
+        <span class="logo-sublabel">Advisory Board</span>
+    </div>
+    <div class="logo-item">
+      <span class="logo-text">iDEAL</span>
+      <span class="logo-sublabel">Former employer</span>
+    </div>
+    <div class="logo-item">
+      <span class="logo-text">FrieslandCampina</span>
+      <span class="logo-sublabel">Former employer</span>
     </div>
   </div>
 </div>
